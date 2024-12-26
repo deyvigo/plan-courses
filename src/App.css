@@ -1,0 +1,8 @@
+#root {
+  width: 80dvw;
+  height: 90dvh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

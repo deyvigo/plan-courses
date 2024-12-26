@@ -1,0 +1,927 @@
+[
+  {
+    "id": 0,
+    "name": "Algorítmica I",
+    "credits": 4,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Estadística",
+    "credits": 3,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 11
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Física Electrónica",
+    "credits": 3,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Ingeniería Económica",
+    "credits": 3,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Introducción al Desarrollo de Software",
+    "credits": 3,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Matemática Básica",
+    "credits": 4,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 10
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organización y Administración",
+    "credits": 3,
+    "cicle": 3,
+    "open": [
+      {
+        "id": 8
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Algorítmica II",
+    "credits": 4,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 0
+      }
+    ],
+    "open": [
+      {
+        "id": 14
+      },
+      {
+        "id": 18
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Contabilidad para la Gestión",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 6
+      }
+    ],
+    "open": [
+      {
+        "id": 19
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Innovación, Tecnología y Emprendimiento",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 3
+      }
+    ],
+    "open": [
+      {
+        "id": 24
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Matemática Discreta",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 5
+      }
+    ],
+    "open": [
+      {
+        "id": 17
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Probabilidades",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 1
+      }
+    ],
+    "open": [
+      {
+        "id": 14
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Procesos de Software",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 4
+      },
+      {
+        "id": 3
+      }
+    ],
+    "open": [
+      {
+        "id": 16
+      },
+      {
+        "id": 20
+      },
+      {
+        "id": 25
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Sistemas Digitales",
+    "credits": 3,
+    "cicle": 4,
+    "prerequisites": [
+      {
+        "id": 2
+      }
+    ],
+    "open": [
+      {
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Análisis y Diseño de Algoritmos",
+    "credits": 3,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 7
+      },
+      {
+        "id": 11
+      }
+    ],
+    "open": [
+      {
+        "id": 36
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Arquitectura de Computadores",
+    "credits": 3,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 13
+      }
+    ],
+    "open": [
+      {
+        "id": 27
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Calidad de Software",
+    "credits": 3,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 12
+      }
+    ],
+    "open": [
+      {
+        "id": 21
+      },
+      {
+        "id": 33
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Computación Visual",
+    "credits": 3,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 10
+      }
+    ],
+    "open": [
+      {
+        "id": 26
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Estructura de Datos",
+    "credits": 4,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 7
+      }
+    ],
+    "open": [
+      {
+        "id": 22
+      },
+      {
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Economía para la Gestión",
+    "credits": 3,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 8
+      }
+    ],
+    "open": [
+      {
+        "id": 24
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Ingeniería de Requisitos",
+    "credits": 4,
+    "cicle": 5,
+    "prerequisites": [
+      {
+        "id": 12
+      }
+    ],
+    "open": [
+      {
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Aseguramiento de la Calidad del Software",
+    "credits": 3,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 16
+      }
+    ],
+    "open": [
+      {
+        "id": 28
+      },
+      {
+        "id": 40
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Base de Datos I",
+    "credits": 4,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 18
+      }
+    ],
+    "open": [
+      {
+        "id": 28
+      },
+      {
+        "id": 29
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Diseño de Software",
+    "credits": 4,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 20
+      },
+      {
+        "id": 18
+      }
+    ],
+    "open": [
+      {
+        "id": 28
+      },
+      {
+        "id": 30
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Formación de Empresas de Software",
+    "credits": 3,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 19
+      },
+      {
+        "id": 9
+      }
+    ],
+    "open": [
+      {
+        "id": 31
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Gestión de la Configuración del Software",
+    "credits": 3,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 12
+      }
+    ],
+    "open": [
+      {
+        "id": 33
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Interacción Hombre Computador",
+    "credits": 3,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 17
+      }
+    ],
+    "open": [
+      {
+        "id": 30
+      },
+      {
+        "id": 32
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sistemas Operativos",
+    "credits": 3,
+    "cicle": 6,
+    "prerequisites": [
+      {
+        "id": 15
+      }
+    ],
+    "open": [
+      {
+        "id": 34
+      },
+      {
+        "id": 39
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Arquitectura de Software",
+    "credits": 4,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 21
+      },
+      {
+        "id": 22
+      },
+      {
+        "id": 23
+      }
+    ],
+    "open": [
+      {
+        "id": 37
+      },
+      {
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Base de Datos II",
+    "credits": 4,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 22
+      }
+    ],
+    "open": [
+      {
+        "id": 36
+      },
+      {
+        "id": 38
+      },
+      {
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Experiencia de Usuario y Usabilidad",
+    "credits": 3,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 23
+      },
+      {
+        "id": 26
+      }
+    ],
+    "open": [
+      {
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Gestión de Proyecto de Software",
+    "credits": 3,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 24
+      }
+    ],
+    "open": [
+      {
+        "id": 45
+      },
+      {
+        "id": 47
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Inteligencia Artificial",
+    "credits": 3,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 26
+      }
+    ],
+    "open": [
+      {
+        "id": 37
+      },
+      {
+        "id": 50
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Métodos Formales para Pruebas",
+    "credits": 3,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 16
+      },
+      {
+        "id": 25
+      }
+    ],
+    "open": [
+      {
+        "id": 42
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Redes y Transmisión de Datos",
+    "credits": 3,
+    "cicle": 7,
+    "prerequisites": [
+      {
+        "id": 27
+      }
+    ],
+    "open": [
+      {
+        "id": 35
+      },
+      {
+        "id": 40
+      },
+      {
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Automatización y Control de Software",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 34
+      }
+    ],
+    "open": [
+      {
+        "id": 48
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Inteligencia de Negocios",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 14
+      },
+      {
+        "id": 29
+      }
+    ],
+    "open": [
+      {
+        "id": 51
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Metodología de la Investigación",
+    "credits": 2,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 28
+      },
+      {
+        "id": 32
+      }
+    ],
+    "open": [
+      {
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Minería de Datos",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 29
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Programación Concurrente y Paralela",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 27
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Seguridad del Software",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 21
+      },
+      {
+        "id": 34
+      }
+    ],
+    "open": [
+      {
+        "id": 44
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Taller de Construcción de Software Web",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 28
+      },
+      {
+        "id": 34
+      },
+      {
+        "id": 29
+      },
+      {
+        "id": 30
+      }
+    ],
+    "open": [
+      {
+        "id": 46
+      },
+      {
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Verificación y Validación de Software",
+    "credits": 3,
+    "cicle": 8,
+    "prerequisites": [
+      {
+        "id": 33
+      }
+    ],
+    "open": [
+      {
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Desarrollo de Tesis I",
+    "credits": 2,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 37
+      }
+    ],
+    "open": [
+      {
+        "id": 52
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Garantía de Software",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 40
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Gerencia de Tecnología de la Información",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 31
+      }
+    ],
+    "open": [
+      {
+        "id": 56
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Gestión de Mantenimiento del Software",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Gestión de Riesgo del Software",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 31
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Internet de las Cosas",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 35
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Taller de Construcción de Software Movil",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 41
+      },
+      {
+        "id": 42
+      }
+    ],
+    "open": [
+      {
+        "id": 53
+      },
+      {
+        "id": 54
+      },
+      {
+        "id": 55
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Software Inteligente",
+    "credits": 3,
+    "cicle": 9,
+    "prerequisites": [
+      {
+        "id": 32
+      }
+    ],
+    "open": [
+      {
+        "id": 51
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Analítica de Datos",
+    "credits": 3,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 36
+      },
+      {
+        "id": 50
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Desarrollo de Tesis II",
+    "credits": 2,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Práctica Pre-Profesional",
+    "credits": 4,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Taller de Aplicaciones Sociales",
+    "credits": 3,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Tendencias de Arquitectura de Software",
+    "credits": 3,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Tendencias en Ingeniería de Software y Gestión",
+    "credits": 3,
+    "cicle": 10,
+    "prerequisites": [
+      {
+        "id": 45
+      }
+    ]
+  }
+]
