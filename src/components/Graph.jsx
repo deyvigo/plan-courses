@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import './App.css'
-import { Tooltip } from './components/Tooltip'
-import jsonData from './data.json'
+import { Tooltip } from './Tooltip'
+import jsonData from './../mocks/data.json'
 
 export const Graph = () => {
   const svgRef = useRef(null)
@@ -94,7 +93,7 @@ export const Graph = () => {
   }, [])
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div className='relative w-full h-full flex justify-center items-center'>
       <svg ref={svgRef}></svg>
       {
         listTooltips.length > 0 && listTooltips.map(({ name, x, y, id }, index) => (
@@ -102,6 +101,5 @@ export const Graph = () => {
         ))
       }
     </div>
-
   )
 }

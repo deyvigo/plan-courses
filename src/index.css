@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -19,4 +23,14 @@ body {
   align-items: center;
   margin: 0;
   height: 100dvh;
+}
+
+#root {
+  width: 80dvw;
+  height: 90dvh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
 }
