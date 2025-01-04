@@ -1,44 +1,61 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import { Tooltip } from './Tooltip'
-import jsonData from './../mocks/data.json'
+import { useDataStore } from '../store/dataStore'
+import jsonData from '../mocks/data.json'
 
 export const Graph = () => {
   const svgRef = useRef(null)
-  const [listTooltips, setListTooltips] = useState([])
+  const { data, setData, circles, setCircles, listTooltips, setListTooltips } = useDataStore()
 
   useEffect(() => {
-    // Obtain the size of the div that contains the svg
     const divElement = svgRef.current.parentElement
     const width = divElement.clientWidth - 30
     const height = divElement.clientHeight - 30
 
-    const handleMouseEnter = (e, d) => {
+    setData(d3.range(jsonData.length).map((dt, index) => ({
+      ... jsonData[index],
+      radius: jsonData[index].credits * 10,
+      x: width / 2,
+      y: height / 2,
+    })))
+  }, [])
+
+  useEffect(() => {
+    const divElement = svgRef.current.parentElement
+    const width = divElement.clientWidth - 30
+    const height = divElement.clientHeight - 30
+
+    const svg = d3.select(svgRef.current)
+      .attr('width', width)
+      .attr('height', height)
+
+    const handleMouseEnter = (e, svgData) => {
       const provisional = []
-      provisional.push({ name: d.name, x: d.x, y: d.y, id: d.id })
+      provisional.push({ name: svgData.name, x: svgData.x, y: svgData.y, id: svgData.id })
 
-      const filteredCicles = data.filter(o => o.cicle === d.cicle)
+      const filteredCicles = data.filter(o => o.cicle === svgData.cicle)
       circles
-        .filter((d, i) => filteredCicles.includes(data[i]))
-        .attr('stroke', 'red')
+        .filter((svgData, i) => filteredCicles.includes(data[i]))
+        .attr('fill', '#754E1A')
 
-      const prerequisites = d.prerequisites ? d.prerequisites.map(prerequisite => prerequisite.id) : []
+      const prerequisites = svgData.prerequisites ? svgData.prerequisites.map(prerequisite => prerequisite.id) : []
       const filteredPrerequisites = data.filter(o => prerequisites.includes(o.id))
       circles
-        .filter((d, i) => filteredPrerequisites.includes(data[i]))
-        .attr('fill', 'green')
+        .filter((svgData, i) => filteredPrerequisites.includes(data[i]))
+        .attr('fill', '#578E7E')
 
-      const open = d.open ? d.open.map(open => open.id) : []
+      const open = svgData.open ? svgData.open.map(open => open.id) : []
       const filteredOpen = data.filter(o => open.includes(o.id))
       circles
-        .filter((d, i) => filteredOpen.includes(data[i]))
-        .attr('fill', 'blue')
+        .filter((svgData, i) => filteredOpen.includes(data[i]))
+        .attr('fill', '#973131')
 
       // Add tooltip for open and prerequisites
-
       filteredPrerequisites.forEach((pr) => {
         provisional.push({ name: pr.name, x: pr.x, y: pr.y, id: pr.id })
       })
+      
       filteredOpen.forEach((op) => {
         provisional.push({ name: op.name, x: op.x, y: op.y, id: op.id })
       })
@@ -50,30 +67,28 @@ export const Graph = () => {
       setListTooltips([])
 
       circles
-        .attr('fill', 'rgb(75, 74, 199)')
-        .attr('stroke', 'white')
+        .attr('fill', '#8D77AB')
+        .attr('stroke', '#F9F6E6')
     }
-
-    const svg = d3.select(svgRef.current)
-      .attr('width', width)
-      .attr('height', height)
-
-    const data = d3.range(jsonData.length).map((dt, index) => ({
-      ... jsonData[index],
-      radius: jsonData[index].credits * 10,
-      x: width / 2,
-      y: height / 2,
-    }))
 
     const circles = svg.selectAll('circle')
       .data(data)
       .enter()
       .append('circle')
-      .attr('fill', 'rgb(75, 74, 199)')
-      .attr('stroke', 'white')
-      .attr('stroke-width', 1)
+      .attr('fill', '#8D77AB')
+      .attr('stroke', '#F9F6E6')
+      .attr('stroke-width', 2)
       .on('mouseenter', handleMouseEnter)
       .on('mouseout', handleMouseOut)
+
+    setCircles(circles)
+  }, [data])
+
+  useEffect(() => {
+    // Obtain the size of the div that contains the svg
+    const divElement = svgRef.current.parentElement
+    const width = divElement.clientWidth - 30
+    const height = divElement.clientHeight - 30
 
     const simulation = d3.forceSimulation(data)
       .force('radial', d3.forceRadial(300, width / 2, height / 2).strength(2))
@@ -90,7 +105,7 @@ export const Graph = () => {
     return () => {
       simulation.stop()
     }
-  }, [])
+  }, [circles])
 
   return (
     <div className='relative w-full h-full flex justify-center items-center'>
