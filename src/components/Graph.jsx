@@ -1,21 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import { Tooltip } from './Tooltip'
 import { useDataStore } from '../store/dataStore'
 import jsonData from '../mocks/data.json'
 
-export const Graph = () => {
+export const Graph = ({ radiusCircle, radiusForce }) => {
   const svgRef = useRef(null)
   const { data, setData, circles, setCircles, listTooltips, setListTooltips } = useDataStore()
 
   useEffect(() => {
     const divElement = svgRef.current.parentElement
-    const width = divElement.clientWidth - 30
-    const height = divElement.clientHeight - 30
+    const width = divElement.clientWidth
+    const height = divElement.clientHeight
 
     setData(d3.range(jsonData.length).map((dt, index) => ({
       ... jsonData[index],
-      radius: jsonData[index].credits * 10,
+      radius: jsonData[index].credits * 5 * radiusCircle,
       x: width / 2,
       y: height / 2,
     })))
@@ -23,8 +23,8 @@ export const Graph = () => {
 
   useEffect(() => {
     const divElement = svgRef.current.parentElement
-    const width = divElement.clientWidth - 30
-    const height = divElement.clientHeight - 30
+    const width = divElement.clientWidth
+    const height = divElement.clientHeight
 
     const svg = d3.select(svgRef.current)
       .attr('width', width)
@@ -91,7 +91,7 @@ export const Graph = () => {
     const height = divElement.clientHeight - 30
 
     const simulation = d3.forceSimulation(data)
-      .force('radial', d3.forceRadial(300, width / 2, height / 2).strength(2))
+      .force('radial', d3.forceRadial(130 * radiusForce, width / 2, height / 2).strength(2))
       .force('collide', d3.forceCollide().radius(d => d.radius + 2))
         .on('tick', () => {
           circles
@@ -108,13 +108,13 @@ export const Graph = () => {
   }, [circles])
 
   return (
-    <div className='relative w-full h-full flex justify-center items-center'>
+    <>
       <svg ref={svgRef}></svg>
       {
         listTooltips.length > 0 && listTooltips.map(({ name, x, y, id }, index) => (
           <Tooltip key={id} text={name} x={x} y={y} />
         ))
       }
-    </div>
+    </>
   )
 }
