@@ -1,4 +1,4 @@
-export const Tooltip = ({ text, x, y, fontSize }) => {
+export const Tooltip = ({ text, x, y, fontSize, closerTootTip }) => {
   return (
     <div
       style={{
@@ -10,8 +10,8 @@ export const Tooltip = ({ text, x, y, fontSize }) => {
         pointerEvents: 'none',
         color: 'black',
         fontSize: fontSize,
-        left: `${x + Math.floor(Math.random() * (30 - 10 + 1)) + 20}px`,
-        top: `${y - Math.floor(Math.random() * (40 - 10 + 1)) + 20}px`,
+        left: `${x + Math.floor(Math.random() * closerTootTip) + closerTootTip}px`,
+        top: `${y - Math.floor(Math.random() * closerTootTip) + closerTootTip}px`,
       }}
     >
       <strong>{text}</strong>

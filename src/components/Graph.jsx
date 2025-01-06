@@ -4,7 +4,7 @@ import { Tooltip } from './Tooltip'
 import { useDataStore } from '../store/dataStore'
 import jsonData from '../mocks/data.json'
 
-export const Graph = ({ radiusCircle, radiusForce, fontSize }) => {
+export const Graph = ({ radiusCircle, radiusForce, fontSize, closerTootTip }) => {
   const svgRef = useRef(null)
   const { data, setData, circles, setCircles, listTooltips, setListTooltips } = useDataStore()
 
@@ -112,7 +112,7 @@ export const Graph = ({ radiusCircle, radiusForce, fontSize }) => {
       <svg ref={svgRef}></svg>
       {
         listTooltips.length > 0 && listTooltips.map(({ name, x, y, id }, index) => (
-          <Tooltip key={id} text={name} x={x} y={y} fontSize={fontSize} />
+          <Tooltip key={id} text={name} x={x} y={y} fontSize={fontSize} closerTootTip={closerTootTip} />
         ))
       }
     </>
