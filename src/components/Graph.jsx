@@ -87,8 +87,8 @@ export const Graph = ({ radiusCircle, radiusForce, fontSize }) => {
   useEffect(() => {
     // Obtain the size of the div that contains the svg
     const divElement = svgRef.current.parentElement
-    const width = divElement.clientWidth - 30
-    const height = divElement.clientHeight - 30
+    const width = divElement.clientWidth
+    const height = divElement.clientHeight
 
     const simulation = d3.forceSimulation(data)
       .force('radial', d3.forceRadial(130 * radiusForce, width / 2, height / 2).strength(2))
